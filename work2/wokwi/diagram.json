@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "author": "FedGuard + PS-13 Energy Extension",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-mpu6050", "id": "mpu1", "top": -60, "left": 200, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 60, "left": 200, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:3V3", "mpu1:VCC", "red", [] ],
+    [ "esp:GND.1", "mpu1:GND", "black", [] ],
+    [ "esp:21", "mpu1:SDA", "green", [] ],
+    [ "esp:22", "mpu1:SCL", "yellow", [] ],
+
+    [ "esp:3V3", "pot1:VCC", "red", [] ],
+    [ "esp:GND.2", "pot1:GND", "black", [] ],
+    [ "esp:34", "pot1:SIG", "blue", [] ]
+  ]
+}

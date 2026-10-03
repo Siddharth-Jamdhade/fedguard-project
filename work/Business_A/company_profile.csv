@@ -1,0 +1,13 @@
+Company Name,Vidarbha Precision Engineering
+GSTIN,27ABCDE1234F1Z5
+Shared Equipment,CNC Lathe Model VT-450 (Shared Asset #SA-07)
+
+Employee ID,Employee Name,Role,Monthly Salary (INR)
+EMP-A01,Rakesh Deshmukh,Machine Operator,16500
+EMP-A02,Sunita Kale,Quality Inspector,15200
+EMP-A03,Vishal Ingle,Machine Operator,16500
+EMP-A04,Prachi Sable,Maintenance Technician,18000
+EMP-A05,Amit Rathi,Shift Supervisor,22000
+
+No. of Employees,5
+Total Monthly Wage Bill (INR),88200

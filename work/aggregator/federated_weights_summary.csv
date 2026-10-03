@@ -1,0 +1,8 @@
+Node (MSME),Samples Contributed,Local Accuracy (%),Coef_rx,Coef_ry,Coef_rz,Intercept,Global Model Accuracy on this Node (%)
+Business_A,96,100.0,2.411,2.268,2.331,-4.734,100.0
+Business_B,61,50.8,-0.007,0.028,0.272,-0.18,47.5
+Business_C,10,100.0,0.787,0.882,0.77,-0.662,100.0
+
+GLOBAL FEDERATED MODEL (sent back to all nodes)
+Coef_rx,Coef_ry,Coef_rz,Intercept,Total Samples Used,Contributing Nodes
+1.431,1.367,1.486,-2.827,167,"Business_A, Business_B, Business_C"

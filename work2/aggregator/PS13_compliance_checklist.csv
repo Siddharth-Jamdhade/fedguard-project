@@ -1,0 +1,11 @@
+PS-13 Requirement,How FedGuard Implements It,File(s)
+Records energy consumption,energy_node.py logs power (W) readings per node every 15 min,energy_node.py / Business_X/energy_data.csv
+Estimates cost,carbon_calculator.py converts kWh to INR via tariff rate,carbon_calculator.py / Business_X_energy_log.csv
+Estimates CO2 emissions,carbon_calculator.py applies CEA grid emission factor (0.727 kgCO2e/kWh),carbon_calculator.py / Business_X_energy_log.csv
+Compares usage across multiple spaces,Each business is a federated node; aggregator compares all 3,aggregator/federated_weights_summary.csv
+Compares usage across time periods,compare_periods() diffs any two period summaries (day/week/month),carbon_calculator.py
+Detects abnormal usage automatically,anomaly_explainer.diagnose() flags power/vibration ratio vs baseline,anomaly_explainer.py
+Explains the likely cause,"Rule-based cause: mechanical fault, electrical inefficiency, or early wear",anomaly_explainer.py / Business_X_anomaly_report.csv
+Suggests specific actions,Each diagnosis includes a concrete suggested_action,Business_X_anomaly_report.csv
+Estimated savings,estimated_monthly_savings_inr + estimated_monthly_co2_reduction_kg per incident,Business_X_anomaly_report.csv
+Fair-use accountability (carried over from original FedGuard scope),Hash-chained usage ledger ties energy use to the same per-business identity already used for vibration data,README_DEMO.txt

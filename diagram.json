@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 115.2, "left": -71.96, "attrs": {} },
+    { "type": "wokwi-mpu6050", "id": "imu1", "top": 119.02, "left": 117.52, "attrs": {} },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "stepper1",
+      "top": -159.59,
+      "left": -105.17,
+      "attrs": { "size": "17" }
+    },
+    { "type": "wokwi-a4988", "id": "drv1", "top": 43.2, "left": -196.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "drv1:VDD", "esp:3V3", "green", [ "h0" ] ],
+    [ "drv1:GND.2", "esp:GND.1", "black", [ "h0" ] ],
+    [ "drv1:STEP", "esp:16", "green", [ "h0" ] ],
+    [ "drv1:DIR", "esp:17", "green", [ "h0" ] ],
+    [ "drv1:ENABLE", "esp:GND.3", "green", [ "h0" ] ],
+    [ "drv1:1A", "stepper1:B+", "green", [ "h124.95", "v-67.12" ] ],
+    [ "drv1:1B", "stepper1:B-", "green", [ "h0" ] ],
+    [ "drv1:2A", "stepper1:A+", "green", [ "h0" ] ],
+    [ "drv1:2B", "stepper1:A-", "green", [ "h0" ] ],
+    [ "imu1:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "imu1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "imu1:SCL", "esp:22", "green", [ "v0" ] ],
+    [ "imu1:SDA", "esp:21", "green", [ "v0" ] ],
+    [ "drv1:RESET", "drv1:SLEEP", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
