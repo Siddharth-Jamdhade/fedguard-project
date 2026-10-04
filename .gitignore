@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+*.db
+*.pkl
+.env
+work/Business_*/company_profile.csv
+serial_paste.txt
+.vscode/
