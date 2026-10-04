@@ -1,9 +1,32 @@
+# ---- Python ----
 venv/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+
+# ---- Generated runtime data ----
 *.db
 *.pkl
+*.log
+
+# ---- Secrets ----
 .env
+
+# ---- Temporary / IDE files ----
+Untitled.txt
+*.txt.tmp
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ---- Old work folders (legacy) ----
 work/Business_*/company_profile.csv
 serial_paste.txt
-.vscode/
+
+# ---- Keep sample CSVs but ignore large raw captures ----
+serial_capture_*.csv

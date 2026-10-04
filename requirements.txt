@@ -1,0 +1,17 @@
+# FedGuard PS-13 — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core ML & Data
+scikit-learn==1.5.2
+numpy==2.1.1
+pandas==2.2.3
+
+# Dashboard
+streamlit==1.39.0
+plotly==5.24.1
+
+# Hardware / Serial (optional — for live ESP32 data capture)
+pyserial==3.5
+
+# Utilities
+joblib==1.4.2
